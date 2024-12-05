@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import GlobalStyles from './styles/GlobalStyles';
@@ -11,14 +11,21 @@ import ProtectedRoute from './components/ProtectedRoute';
 import CreatePost from './pages/CreatePost';
 import Search from './pages/Search';
 import Donate from './pages/Donate';
+import LoginModal from './components/LoginModal';
 
 const App = () => {
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+
   return (
     <AuthProvider>
       <Router>
         <div style={{ position: 'relative', minHeight: '100vh' }}>
           <GlobalStyles />
-          <Navbar />
+          <Navbar onLoginClick={() => setIsLoginModalOpen(true)} />
+          <LoginModal 
+            isOpen={isLoginModalOpen}
+            onClose={() => setIsLoginModalOpen(false)}
+          />
           <main style={{ paddingTop: '120px' }}>
             <Routes>
               <Route path="/" element={<Home />} />
