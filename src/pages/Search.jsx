@@ -9,45 +9,45 @@ const Search = () => {
   const petData = [
     {
       id: 1,
-      title: "Мөнгө хохойны бүдүүн гэдэсний хагалгаа.",
+      title: "Моки нохойны бүдүүн гэдэсний хагалгаа.",
       price: "2500$",
       time: "2 өдрийн өмнө",
-      imageUrl: "../images/dog1.png"
+      image: "/images/dog1.png"
     },
     {
       id: 2,
       title: "Муурын шарх эмчлэх",
       price: "1200$",
       time: "1 цагийн өмнө",
-      imageUrl: "/images/cat1.png"
+      image: "/images/cat1.png"
     },
     {
       id: 3,
       title: "Нохойн эмчилгээ",
       price: "3000$",
       time: "4 цагийн өмнө",
-      imageUrl: "/images/dog2.png"
+      image: "/images/dog2.png"
     },
     {
       id: 4,
       title: "Туслах хагалгаа",
       price: "1800$",
       time: "5 өдрийн өмнө",
-      imageUrl: "/path/to/surgery.jpg"
+      image: "/images/surgery.jpg"
     },
     {
       id: 5,
       title: "Яаралтай тусламж",
       price: "900$",
       time: "Өнөөдөр",
-      imageUrl: "/path/to/emergency.jpg"
+      image: "/images/emergency.jpg"
     },
     {
       id: 6,
       title: "Вакцинжуулалт",
       price: "500$",
       time: "Маргааш",
-      imageUrl: "/path/to/vaccine.jpg"
+      image : "/images/vaccine.jpg"
     }
   ];
 

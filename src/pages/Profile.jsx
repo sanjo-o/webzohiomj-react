@@ -4,9 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import api from '../services/api';
 
 const Profile = () => {
-  const { currentUser: user, updateUser } = useAuth();
-  console.log('Current user:', user);
-  console.log('Auth state:', { user, isAuthenticated: !!user });
+  const { user, updateUser } = useAuth();
   const [isEditing, setIsEditing] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
@@ -19,21 +17,15 @@ const Profile = () => {
   });
 
   useEffect(() => {
-    const fetchProfile = async () => {
-      try {
-        const response = await api.get('/profile');
-        console.log('Profile response:', response.data);
-        updateUser(response.data);
-      } catch (error) {
-        console.error('Error fetching profile:', error);
-        setError(error.response?.data?.message || 'Failed to load profile');
-      }
-    };
-
     if (user) {
-      fetchProfile();
+      setFormData({
+        name: user.name || '',
+        phone: user.phone || '',
+        address: user.address || '',
+        avatar: user.avatar || null
+      });
     }
-  }, [user, updateUser]);
+  }, [user]);
 
   const handleInputChange = (e) => {
     setFormData({
@@ -70,13 +62,13 @@ const Profile = () => {
         }
       });
 
-      const response = await api.put('/profile', formDataToSend, {
+      const response = await api.put('/auth/update-profile', formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
 
-      updateUser(response.data.user);
+      updateUser(response.data);
       setSuccess('Мэдээлэл амжилттай шинэчлэгдлээ');
       setIsEditing(false);
     } catch (error) {

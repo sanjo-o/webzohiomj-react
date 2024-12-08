@@ -16,69 +16,58 @@ const float = keyframes`
   }
 `;
 
-const sparkle = keyframes`
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.2); opacity: 0.8; }
-`;
-
-const wave = keyframes`
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(10deg); }
-  75% { transform: rotate(-10deg); }
-  100% { transform: rotate(0deg); }
-`;
-
-const pawPrintAnimation = keyframes`
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 0.2; transform: translateY(0); }
-`;
-
 const Home = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   const campaigns = [
     {
       id: 1,
-      title: "Мохи охойны бүдгүй гэдэсний хагалгаа",
-      image: "/images/dog1.png",
+      title: "Моки нохойны бүдүүн гэдэсний хагалгаа",
+      image: "/images/dog2.jpg",
+      amount: "2,500.00",
       progress: 45,
-      amount: "250.00",
+      time: "2 өдрийн өмнө"
     },
     {
       id: 2,
-      title: "Осолд орсон нохойны эмчилгээний зардал",
-      image: "/images/dog2.jpg",
+      title: "Муурын шарх эмчлэх",
+      image: "/images/cat1.png",
+      amount: "1,200.00",
       progress: 60,
-      amount: "150.00",
+      time: "1 цагийн өмнө"
     },
     {
       id: 3,
-      title: "Өвчтэй муурны эмчилгээний зардал.",
-      image: "/images/cat1.png",
+      title: "Нохойн эмчилгээ",
+      image: "/images/dog2.jpg",
+      amount: "3,000.00",
       progress: 30,
-      amount: "300.00",
+      time: "4 цагийн өмнө"
     },
     {
       id: 4,
-      title: "Гудамжны нохдын тэжээлийн зардал.",
+      title: "Туслах хагалгаа",
       image: "/images/dog3.png",
+      amount: "1,800.00",
       progress: 75,
-      amount: "200.00",
+      time: "5 өдрийн өмнө"
     },
     {
       id: 5,
-      title: "Хорт хавдартай муурны мэс засал.",
+      title: "Яаралтай тусламж",
       image: "/images/cat2.png",
+      amount: "900.00",
       progress: 50,
-      amount: "180.00",
+      time: "Өнөөдөр"
     },
     {
       id: 6,
-      title: "Гэмтсэн нохойны сэргээн засах эмчилгээ.",
+      title: "Вакцинжуулалт",
       image: "/images/dog4.png",
+      amount: "500.00",
       progress: 85,
-      amount: "120.00",
-    },
+      time: "Маргааш"
+    }
   ];
 
   return (
