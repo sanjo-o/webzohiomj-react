@@ -12,6 +12,8 @@ import CreatePost from './pages/CreatePost';
 import Search from './pages/Search';
 import Donate from './pages/Donate';
 import LoginModal from './components/LoginModal';
+import Footer from './components/layout/Footer';
+import CreatorPage from './pages/CreatorPage';
 
 const App = () => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
@@ -43,9 +45,11 @@ const App = () => {
                 } 
               />
               <Route path="/create-campaign" element={<CreatePost />} />
+              <Route path="/creator" element={<CreatorPage />} />
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </main>
+          <Footer />
         </div>
       </Router>
     </AuthProvider>

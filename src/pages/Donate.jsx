@@ -211,7 +211,7 @@ const Donate = () => {
                   <SectionTitle>QPay мэдээлэл</SectionTitle>
                   <QPayContainer>
                     <QRCodePlaceholder>
-                      <QRImage src="/images/qr-placeholder.png" alt="QR Code" />
+                      <QRImage src="/images/qr.png" alt="QR Code" />
                     </QRCodePlaceholder>
                     <QPayInstructions>
                       <InstructionStep>

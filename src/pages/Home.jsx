@@ -120,7 +120,7 @@ const Home = () => {
 const HeroSection = styled.section`
   min-height: 100vh;
   margin-top: -80px;
-  padding-top: 80px;
+  padding-top: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;

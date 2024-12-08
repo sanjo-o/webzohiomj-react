@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const FooterPanel = () => {
+  const navigate = useNavigate();
+  
   return (
     <FooterContainer>
       <FooterGrid>
@@ -9,7 +12,7 @@ const FooterPanel = () => {
           <Title>Хандив өргөх бол</Title>
           <List>
             <ListItem>Ангилалууд</ListItem>
-            <ListItem>Хан</ListItem>
+            <ListItem>Ангилалууд</ListItem>
             <ListItem>Ангилалууд</ListItem>
             <ListItem>Ангилалууд</ListItem>
           </List>
@@ -31,7 +34,7 @@ const FooterPanel = () => {
             <ListItem>Азтай савар</ListItem>
             <ListItem>Холбогдох дугаар</ListItem>
             <ListItem>FACEBOOK бүлэг</ListItem>
-            <ListItem>Ангилалууд</ListItem>
+          <ListItem onClick={() => navigate('/creator')}>Дэлгэрэнгүй</ListItem>
           </List>
         </Column>
       </FooterGrid>
