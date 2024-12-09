@@ -3,7 +3,6 @@ import styled, { keyframes } from 'styled-components';
 import CampaignCard from '../components/campaign/CampaignCard';
 import ScrollPanel from '../components/ScrollPanel';
 import FeaturedNews from '../components/FeaturedNews';
-import FooterPanel from '../components/layout/Footer';
 import LoginModal from '../components/LoginModal';
 import Navbar from '../components/layout/NavBar';
 
@@ -99,7 +98,6 @@ const Home = () => {
         <FeaturedNews />
       </Container>
 
-      <FooterPanel />
 
       <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
     </>

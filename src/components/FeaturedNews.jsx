@@ -13,14 +13,14 @@ const newsItems = [
     image: "/images/dog2.jpg",
     title: "Онцлох мэдээ 2:",
     description: "Шинэ мэдээний тайлбар...",
-    author: "John Doe",
+    author: "Saikhantsetseg Oyunsugar",
     time: "3 цагийн өмнө"
   },
   {
     image: "/images/dog3.png",
     title: "Онцлох мэдээ 3:",
     description: "Өөр нэг мэдээний тайлбар...",
-    author: "Jane Smith",
+    author: "Saikhantsetseg Oyunsugar",
     time: "4 цагийн өмнө"
   }
 ];

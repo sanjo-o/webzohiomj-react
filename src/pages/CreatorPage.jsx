@@ -60,25 +60,25 @@ const CreatorPage = () => {
       name: 'Sanjaa', 
       socialMedia: 'https://www.instagram.com/sanjoo_____/', 
       id: 'B231880013',
-      image: '/images/Sanjaa.jpg' // Replace with actual image path
+      image: '/images/Sanjaa.jpg' 
     },
     { 
       name: 'Saikhanjargal', 
       socialMedia: 'https://www.instagram.com/saihnanana/', 
       id: 'B231940056',
-      image: '/images/Saikhanjargal.jpg' // Replace with actual image path
+      image: '/images/Saikhanjargal.jpg' 
     },
     { 
       name: 'Oyunsugar', 
       socialMedia: 'https://www.instagram.com/0yukanna/', 
       id: 'B231940041',
-      image: '/images/Oyuka.jpg' // Replace with actual image path
+      image: '/images/Oyuk.jpg' 
     },
     { 
       name: 'Lhagvanym', 
       socialMedia: 'https://www.facebook.com/profile.php?id=100059826974608', 
       id: 'B231940052',
-      image: '/images/Lhagvanym.jpg' // Replace with actual image path
+      image: '/images/Lhagvanym.jpg' 
     },
   ];
 

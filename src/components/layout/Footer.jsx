@@ -43,9 +43,10 @@ const FooterPanel = () => {
 };
 
 const FooterContainer = styled.footer`
-  background: #fff;
+  background: #ffffff;
   padding: 60px 20px;
-  margin-top: 40px;
+  width: 100%;
+  margin: 0;
 `;
 
 const FooterGrid = styled.div`
