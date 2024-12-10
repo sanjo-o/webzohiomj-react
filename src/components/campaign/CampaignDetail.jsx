@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
-import DonationCard from 'src/components/campaign/DonationCard.jsx';
+import DonationCard from './DonationCaard.jsx';
 
 const CampaignDetailPage = () => {
   const { id } = useParams();

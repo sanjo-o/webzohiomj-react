@@ -5,7 +5,7 @@ import ScrollPanel from '../components/ScrollPanel';
 import FeaturedNews from '../components/FeaturedNews';
 import LoginModal from '../components/LoginModal';
 import Navbar from '../components/layout/NavBar';
-
+import { useNavigate } from 'react-router-dom';
 const float = keyframes`
   0%, 100% { 
     transform: translateY(0); 
@@ -16,6 +16,7 @@ const float = keyframes`
 `;
 
 const Home = () => {
+  const navigate = useNavigate();
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   const campaigns = [
@@ -65,9 +66,14 @@ const Home = () => {
       image: "/images/dog4.png",
       amount: "500.00",
       progress: 85,
-      time: "Маргааш"
+      time: "Маргаш"
     }
   ];
+
+    const handleCampaignClick = (campaignId) => {
+      console.log('Clicking campaign with ID:', campaignId);
+      navigate(`/campaign/${campaignId}`);
+  };
 
   return (
     <>
@@ -87,8 +93,13 @@ const Home = () => {
           <Container>
             <Grid>
               {campaigns.map(campaign => (
-                <CampaignCard key={campaign.id} campaign={campaign} />
-              ))}
+                <CardWrapper 
+                  key={campaign.id}
+                  onClick={() => handleCampaignClick(campaign.id)}
+                >
+                  <CampaignCard campaign={campaign} />
+                </CardWrapper>
+              ))} 
             </Grid>
           </Container>
         </CampaignsSection>
@@ -210,6 +221,15 @@ const Grid = styled.div`
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+  }
+`;
+
+const CardWrapper = styled.div`
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-5px);
   }
 `;
 
